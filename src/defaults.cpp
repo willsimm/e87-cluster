@@ -27,3 +27,7 @@ uint8_t g_time_second = 0;
 uint8_t g_time_day = 0;
 uint8_t g_time_month = 0;
 uint16_t g_time_year = 0;
+
+int sweepcount=0;
+unsigned long timeAlive = millis();
+unsigned long timeLast = timeAlive;

@@ -1,15 +1,23 @@
 #include <globals.h>
 #include <serial.h>
+/*
+  uint8_t - Blinkers
+            0 - Off
+            1 - Left
+            2 - Right
+            3 - Hazzard
 
+*/
 void readSerial()
 {
     while (Serial.available())
     {
+        Serial.println("serial");
         if (Serial.readStringUntil(';') != "SH")
         {
             continue;
         }
-
+/*SH;1;1;1;1;1;1;1;3;2000;100;50;50;1;1;1;1;12;34;56;01;01;2025;*/
         bool ignition = Serial.readStringUntil(';').toInt();
         bool engine_running = Serial.readStringUntil(';').toInt();
 
@@ -51,6 +59,7 @@ void readSerial()
         g_lights_indicators = lights_indicators;
 
         g_rpm = rpm;
+        Serial.println(g_rpm);
         g_speed = speed;
         g_fuel = fuel;
 

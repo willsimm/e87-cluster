@@ -29,3 +29,9 @@ extern uint8_t g_time_second;
 extern uint8_t g_time_day;
 extern uint8_t g_time_month;
 extern uint16_t g_time_year;
+
+extern int sweepcount;
+extern unsigned long timeAlive;
+extern unsigned long timeLast;
+
+
