@@ -1,7 +1,7 @@
 #include <globals.h>
 
-bool g_ignition = false;
-bool g_engine_running = false;
+bool g_ignition = true;
+bool g_engine_running = true;
 
 bool g_lights_side = false;
 bool g_lights_dip = false;
